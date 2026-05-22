@@ -2,6 +2,9 @@ import Hero from '../sections/Hero'
 import SectionHeader from '../components/patterns/SectionHeader'
 import ServiceCard from '../components/patterns/ServiceCard'
 import LogoCloud from '../components/patterns/LogoCloud'
+import Stats from '../sections/Stats'
+import Portfolio from '../sections/Portfolio'
+import Testimonials from '../sections/Testimonials'
 import { services } from '../data/services'
 import { platforms } from '../data/platforms'
 
@@ -33,6 +36,15 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Stats */}
+      <Stats />
+
+      {/* Portfolio */}
+      <Portfolio />
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Platforms Section */}
       <section className="section-padding py-24 bg-white">

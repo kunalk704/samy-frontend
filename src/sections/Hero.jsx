@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
       {/* Background subtle gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-50/50 via-white to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-br from-brand-50/50 via-white to-white pointer-events-none" />
       
       <div className="relative section-padding pt-20 pb-24 md:pt-28 md:pb-32 lg:pt-32 lg:pb-40">
         <div className="container-wide text-center">
