@@ -5,7 +5,7 @@ function Stats() {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.2 })
 
   return (
-    <section className="section-padding py-20 bg-brand-600">
+    <section id="stats" className="section-padding py-20 bg-brand-600">
       <div
         ref={ref}
         className={`container-wide transition-all duration-1000 ${

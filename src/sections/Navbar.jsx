@@ -13,7 +13,18 @@ function Navbar() {
           
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-dark-900">Samy</span>
+            <img 
+                src="/images/logos/samy-logo.webp" 
+                alt="Samy" 
+                 className="h-8 w-auto"
+                  onError={(e) => {
+                  e.target.style.display = 'none'
+                  e.target.nextSibling.style.display = 'inline'
+                  }}
+            />
+           <span className="hidden text-2xl font-bold text-dark-900 tracking-tight" style={{display: 'none'}}>
+           Samy
+           </span>      
             <span className="hidden sm:inline text-sm text-brand-600 bg-brand-50 px-2 py-0.5 rounded">
               Ecosystem
             </span>
@@ -25,6 +36,13 @@ function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => {
+                   e.preventDefault()
+                   const element = document.querySelector(link.href)
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    }
+                   }}
                 className="text-dark-600 hover:text-brand-600 font-medium"
               >
                 {link.label}
@@ -53,7 +71,18 @@ function Navbar() {
       )}>
         <div className="section-padding pb-6 space-y-4 bg-white border-b border-dark-100">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="block text-dark-600 font-medium">
+            <a 
+             key={link.label} 
+             href={link.href} 
+             onClick={(e) => {
+               e.preventDefault()
+               const element = document.querySelector(link.href)
+               if (element) {
+                 element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+               }
+             }}
+             className="block text-dark-600 font-medium"
+            >
               {link.label}
             </a>
           ))}
